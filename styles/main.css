@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    font-family:'Sora', sans-serif;
+}
+ 
+:root {
+    --mainTextColor: #000;
+    --mainLinkColor: #0da2b8;
+    --mainBorderColor: rgb(218 218 218);
+    --mainBgColor: rgb(255 255 255);
+}
+
+li {
+    list-style: none;
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+------------------------BACKGROUNDPIC-----------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+body {
+    background-image: url("/Assets/images/websitebackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+---------------------MENU/SOCIALMEDIA/BUTTON----------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+.button {
+    display: inline-flex;
+    height: 50px;
+    width: max-content;
+    padding: 0;
+    background: rgb(48, 48, 48);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+
+.button:hover {
+    background: rgba(24, 24, 24, 0.411);
+}
+
+.button:active {
+    background: rgba(27, 27, 27, 0.815);
+}
+
+.button__text, .button__icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.button__text{
+    color: white;
+}
+
+.button__icon {
+    font-size: 1.5em;
+    background: rgba( 0, 0, 0, 0.38);
+}
+
+.menu--container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content:space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+ion-icon {
+    color: white;
+  }
+
+#menu--bar {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------PAGE 1------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+p, span, li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9em;
+    font-size: 1.4em;
+}
+
+.container--main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#main--content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.section--education, .section--techstack, .section--webexperience {
+    padding-top: 2em;
+    border: 2px solid rgb(156, 156, 156);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    width: max-content;
+    height: max-content;
+    background: rgba( 0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.section--contact {
+    position: absolute;
+    display: grid;
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+-------------------------------HEADER-----------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+.header2 {
+    padding-top: 5px;
+}
+
+.header3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.myname {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.bio, a {
+    font-weight: 400;
+}
+
+.profile--pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.email {
+    color: var(--mainTextColor);
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+---------------------MENU/SOCIALMEDIA/BUTTON----------------------
+-------------------------ALTERNATIVE------------------------------
+------------------------------------------------------------------ */
+
+#social--media {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#social--media a{
+    font-size: 0.9em;
+    color: var(--secondaryTextColor);
+    transition: 0.3s;
+}
+
+#social--media a:hover{
+    color: var(--mainLinkColor);
+}
+
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------TECHSTACK---------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+.wrapper--techstack__items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+}
+
+.card--techstack{
+    border: 1px solid var(--mainBorderColor);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+---------------------------WEBEXPERIENCE--------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+.section--webexperience {
+    width: 20.3rem;
+    height: 11.7rem;
+}
+
+.click--source { 
+    font-size: 0.8rem;
+    margin-top: -10px;
+    padding-left: 5px;
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+----------------------------MOBILE-VIEW---------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+@media screen and (max-width: 800px) {
+    #wrapper--hero{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .profile--pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .myname {
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .email {
+        text-align: center;
+    }
+
+    .section--page {
+        padding-top: 1em;
+    }
+
+    .section--education, .section--techstack, .section--webexperience {
+        width: 95%;
+        text-align: center;
+    }
+
+    .card--techstack {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        text-align: center;
+    }
+
+    .menu--container{
+        gap: 0.5em;
+    }
+
+    .section--contact {
+        display: none;
+    }
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+----------------------------MOBILE-VIEWSMALL----------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+@media screen and (max-width: 658px) {
+
+    .download {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 485px) {
+
+    .button__text {
+        font-size: 0.7rem;
+    }
+    .button__icon {
+        font-size: 0.9rem;
+    }
+
+    .card--techstack {
+        width: 47.5%;
+    }
+}
